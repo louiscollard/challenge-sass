@@ -1,1 +1,97 @@
-/*# sourceMappingURL=style.min.css.map */
+body {
+	font: 100% "Space Mono", monospace;
+	color: #6b717f;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+body main {
+	padding: 0 1em;
+	color: #8c8c8c;
+	page-break-inside: avoid;
+	font-family: monospace;
+	font-size: 15px;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1em 1.5em;
+	display: block;
+	word-wrap: break-word;
+}
+body main article {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+body main article section {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-ms-flex-preferred-size: 45%;
+	flex-basis: 45%;
+	border: 1px #8c8c8c solid;
+	-webkit-box-shadow: 10px 10px 15px -4px #6b717f;
+	box-shadow: 10px 10px 15px -4px #6b717f;
+	padding: 16px;
+	margin: 16px;
+	clear: both;
+	overflow: auto;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body main article section#selling-points {
+	-webkit-box-flex: 2;
+	-ms-flex-positive: 2;
+	flex-grow: 2;
+	-ms-flex-preferred-size: 100%;
+	flex-basis: 100%;
+}
+body main article code {
+	background: #000;
+	border: 1px solid #6b717f;
+}
+body main article code.before {
+	float: left;
+	width: 40%;
+}
+body main article code.after {
+	float: right;
+	width: 40%;
+}
+body main h1,
+body main h2,
+body main h3 {
+	color: #bf4080;
+}
+body main h1 {
+	text-align: center;
+}
+body main h3 {
+	text-align: center;
+	font-size: 1.5em;
+	padding: 32px;
+	margin-bottom: 0px;
+}
+body main .messages {
+	padding: 16px;
+}
+body main .success,
+body main .error,
+body main .warning {
+	border: 1px solid #8c8c8c;
+	padding: 16px;
+	color: #fff;
+}
+body main .success {
+	background-color: green;
+}
+body main .error {
+	background-color: red;
+}
+body main .warning {
+	background-color: orange;
+} /*# sourceMappingURL=style.min.css.map */
