@@ -20,3 +20,6 @@ Write all your variables in a partial file and link it to the main file.
   
 ### Part 3 - the tricky part! (optional)
 With the list of advantages (class "advantages"), create a gradation of color for the background and the text color. For it, you have to use a loop @for : here the documentation
+  
+### Link to the page
+https://louiscollard.github.io/challenge-sass/
