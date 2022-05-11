@@ -2,7 +2,7 @@ body {
   font: 100% "Space Mono", monospace;
   color: #6b717f;
   margin: 0;
-  padding: 0;
+  padding: 16px;
   background-color: #fff;
   overflow-x: hidden;
 }
@@ -21,8 +21,9 @@ body h3 {
   margin-bottom: 0px;
 }
 body main {
-  padding: 0 1em;
-  color: #8c8c8c;
+  padding: 0 16px;
+  color: #6b717f;
+  margin: 0;
   page-break-inside: avoid;
   font-family: monospace;
   font-size: 15px;
@@ -30,7 +31,7 @@ body main {
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1em 1.5em;
+  padding: 16px;
   display: block;
   word-wrap: break-word;
 }
@@ -57,41 +58,70 @@ body main article section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-body main article section section #selling-points {
+body main article section#selling-points {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
+body main article section#selling-points .advantages li:nth-child(0) {
+  background: blue;
+  color: purple;
+}
+body main article section#selling-points .advantages li:nth-child(1) {
+  background: #2424ff;
+  color: #5c005c;
+}
+body main article section#selling-points .advantages li:nth-child(2) {
+  background: #4747ff;
+  color: #390039;
+}
+body main article section#selling-points .advantages li:nth-child(3) {
+  background: #6b6bff;
+  color: #150015;
+}
+body main article section#selling-points .advantages li:nth-child(4) {
+  background: #8f8fff;
+  color: black;
+}
+body main article section#selling-points .advantages li:nth-child(5) {
+  background: #b3b3ff;
+  color: black;
+}
+body main article section#selling-points .advantages li:nth-child(6) {
+  background: #d6d6ff;
+  color: black;
+}
 body main article section code {
   background: #000;
   border: 1px solid #6b717f;
 }
-body main article section code.before {
+body main article section code:before {
   float: left;
   width: 40%;
 }
-body main article section code.after {
+body main article section code:after {
   float: right;
   width: 40%;
 }
-body main .messages {
+body main .messages .warning, body main .messages .error, body main .messages .success {
   padding: 16px;
-}
-body main .success,
-body main .error,
-body main .warning {
   border: 1px solid #8c8c8c;
-  padding: 16px;
   color: #fff;
 }
-body main .success {
+body main .messages .success {
   background-color: green;
 }
-body main .error {
+body main .messages .error {
   background-color: red;
 }
-body main .warning {
+body main .messages .error:hover {
+  background-color: green;
+}
+body main .messages .warning {
   background-color: orange;
+}
+body footer h3 {
+  padding: 32px;
 }/*# sourceMappingURL=style.css.map */

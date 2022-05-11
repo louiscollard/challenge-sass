@@ -1,0 +1,5 @@
+@mixin shadow-box($color-font-body-shadow-border) {
+    -webkit-box-shadow: 10px 10px 15px -4px $color-font-body-shadow-border;
+    -moz-box-shadow: 10px 10px 15px -4px $color-font-body-shadow-border;
+    box-shadow: 10px 10px 15px -4px $color-font-body-shadow-border;
+}

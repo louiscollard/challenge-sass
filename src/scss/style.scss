@@ -1,18 +1,17 @@
 @import "./variables";
-@import "./placeholders";
 @import "./mixins";
 
 body {
 	font: 100% "Space Mono", monospace;
-	color: #6b717f;
+	color: $color-font-body-shadow-border;
 	margin: 0;
-	padding: 0;
-	background-color: #fff;
+	padding: $padding-general;
+	background-color: $bg-body;
 	overflow-x: hidden;
 	h1,
 	h2,
 	h3 {
-		color: #bf4080;
+		color: $color-title;
 	}
 
 	h1 {
@@ -22,12 +21,13 @@ body {
 	h3 {
 		text-align: center;
 		font-size: 1.5em;
-		padding: 32px;
+		padding: $padding-general * 2;
 		margin-bottom: 0px;
 	}
 	main {
-		padding: 0 1em;
-		color: #8c8c8c;
+		padding: 0 $padding-general;
+		color: $color-font-body-shadow-border;
+		margin: 0;
 		page-break-inside: avoid;
 		font-family: monospace;
 		font-size: 15px;
@@ -35,7 +35,7 @@ body {
 		margin-bottom: 1.6em;
 		max-width: 100%;
 		overflow: auto;
-		padding: 1em 1.5em;
+		padding: $padding-general;
 		display: block;
 		word-wrap: break-word;
 
@@ -47,58 +47,68 @@ body {
 				flex-grow: 1;
 				flex-basis: 45%;
 				border: 1px #8c8c8c solid;
-				-webkit-box-shadow: 10px 10px 15px -4px #6b717f;
-				-moz-box-shadow: 10px 10px 15px -4px #6b717f;
-				box-shadow: 10px 10px 15px -4px #6b717f;
-				padding: 16px;
+				@include shadow-box($color-font-body-shadow-border);
+				padding: $padding-general;
 				margin: 16px;
 				clear: both;
 				overflow: auto;
 				box-sizing: border-box;
 
-				section #selling-points {
+				&#selling-points {
 					flex-grow: 2;
 					flex-basis: 100%;
+					.advantages {
+						@for $i from 0 to 7 {
+							& li:nth-child(#{$i}) {
+								background: lighten(blue, $i * 7%);
+								color: darken(purple, $i * 7%);
+							}
+						}
+					}
 				}
 
 				code {
-					background: #000;
-					border: 1px solid #6b717f;
-				}
+					background: $bg-code;
+					border: 1px solid $color-font-body-shadow-border;
+					&:before {
+						float: left;
+						width: 40%;
+					}
 
-				code.before {
-					float: left;
-					width: 40%;
-				}
-
-				code.after {
-					float: right;
-					width: 40%;
+					&:after {
+						float: right;
+						width: 40%;
+					}
 				}
 			}
 		}
+		%messages-shared {
+			padding: $padding-general;
+			border: 1px solid $color-border-alert;
+			color: $bg-body;
+		}
+
 		.messages {
-			padding: 16px;
+			.success {
+				@extend %messages-shared;
+				background-color: $bg-sucess;
+			}
+			.error {
+				@extend %messages-shared;
+				background-color: $bg-error;
+				&:hover {
+					background-color: $bg-sucess;
+				}
+			}
+			.warning {
+				@extend %messages-shared;
+				background-color: $bg-warning;
+			}
 		}
-
-		.success,
-		.error,
-		.warning {
-			border: 1px solid #8c8c8c;
-			padding: 16px;
-			color: #fff;
-		}
-
-		.success {
-			background-color: green;
-		}
-
-		.error {
-			background-color: red;
-		}
-
-		.warning {
-			background-color: orange;
+	}
+	footer {
+		h3 {
+			padding: $padding-general * 2;
 		}
 	}
 }
